@@ -3280,6 +3280,12 @@
         "docs": "https://docs.rsshub.app/routes/anime#bangumi-fan-zu-ji-hua",
         "source": "/anime",
         "target": "/bangumi/tv/followrank"
+      },
+      {
+        "title": "用户想看",
+        "docs": "https://docs.rsshub.app/routes/anime#bangumi-fan-zu-ji-hua",
+        "source": "/anime/list/:id/wish",
+        "target": "/bangumi/tv/user/wish/:id"
       }
     ]
   },
@@ -3345,6 +3351,12 @@
         "docs": "https://docs.rsshub.app/routes/anime#bangumi-fan-zu-ji-hua",
         "source": "/anime",
         "target": "/bangumi/tv/followrank"
+      },
+      {
+        "title": "用户想看",
+        "docs": "https://docs.rsshub.app/routes/anime#bangumi-fan-zu-ji-hua",
+        "source": "/anime/list/:id/wish",
+        "target": "/bangumi/tv/user/wish/:id"
       }
     ]
   },
@@ -4299,6 +4311,27 @@
           "/"
         ],
         "target": "/btzj/:category?"
+      }
+    ]
+  },
+  "buaa.edu.cn": {
+    "_name": "北京航空航天大学",
+    "news": [
+      {
+        "title": "新闻网",
+        "docs": "https://docs.rsshub.app/routes/university#bei-jing-hang-kong-hang-tian-da-xue",
+        "source": [
+          "/*"
+        ]
+      }
+    ],
+    "www.sme": [
+      {
+        "title": "集成电路科学与工程学院",
+        "docs": "https://docs.rsshub.app/routes/university#bei-jing-hang-kong-hang-tian-da-xue-ji-cheng-dian-lu-ke-xue-yu-gong-cheng-xue-yuan",
+        "source": [
+          "/*"
+        ]
       }
     ]
   },
@@ -8935,6 +8968,19 @@
       }
     ]
   },
+  "egsea.com": {
+    "_name": "e 公司",
+    ".": [
+      {
+        "title": "快讯",
+        "docs": "https://docs.rsshub.app/routes/new-media#e-gong-si",
+        "source": [
+          "/news/flash"
+        ],
+        "target": "/egsea/flash"
+      }
+    ]
+  },
   "elasticsearch.cn": {
     "_name": "Elastic 中文社区",
     ".": [
@@ -10315,6 +10361,74 @@
       }
     ]
   },
+  "gdsrx.org.cn": {
+    "_name": "广东省食品药品审评认证技术协会",
+    ".": [
+      {
+        "title": "栏目",
+        "docs": "https://docs.rsshub.app/routes/other#guang-dong-sheng-shi-pin-yao-pin-shen-ping-ren-zheng-ji-shu-xie-hui-lan-mu",
+        "source": [
+          "/portal/list/index/id"
+        ]
+      },
+      {
+        "title": "法规文库",
+        "docs": "https://docs.rsshub.app/routes/other#guang-dong-sheng-shi-pin-yao-pin-shen-ping-ren-zheng-ji-shu-xie-hui-lan-mu",
+        "source": [
+          "/portal/list/index/id/10.html"
+        ],
+        "target": "/gdsrx/10"
+      },
+      {
+        "title": "法规资讯",
+        "docs": "https://docs.rsshub.app/routes/other#guang-dong-sheng-shi-pin-yao-pin-shen-ping-ren-zheng-ji-shu-xie-hui-lan-mu",
+        "source": [
+          "/portal/list/index/id/12.html"
+        ],
+        "target": "/gdsrx/12"
+      },
+      {
+        "title": "专家供稿",
+        "docs": "https://docs.rsshub.app/routes/other#guang-dong-sheng-shi-pin-yao-pin-shen-ping-ren-zheng-ji-shu-xie-hui-lan-mu",
+        "source": [
+          "/portal/list/index/id/13.html"
+        ],
+        "target": "/gdsrx/13"
+      },
+      {
+        "title": "协会动态 会员动态",
+        "docs": "https://docs.rsshub.app/routes/other#guang-dong-sheng-shi-pin-yao-pin-shen-ping-ren-zheng-ji-shu-xie-hui-lan-mu",
+        "source": [
+          "/portal/list/index/id/20.html"
+        ],
+        "target": "/gdsrx/20"
+      },
+      {
+        "title": "协会动态",
+        "docs": "https://docs.rsshub.app/routes/other#guang-dong-sheng-shi-pin-yao-pin-shen-ping-ren-zheng-ji-shu-xie-hui-lan-mu",
+        "source": [
+          "/portal/list/index/id/37.html"
+        ],
+        "target": "/gdsrx/37"
+      },
+      {
+        "title": "协会通知公告",
+        "docs": "https://docs.rsshub.app/routes/other#guang-dong-sheng-shi-pin-yao-pin-shen-ping-ren-zheng-ji-shu-xie-hui-lan-mu",
+        "source": [
+          "/portal/list/index/id/38.html"
+        ],
+        "target": "/gdsrx/38"
+      },
+      {
+        "title": "会员动态",
+        "docs": "https://docs.rsshub.app/routes/other#guang-dong-sheng-shi-pin-yao-pin-shen-ping-ren-zheng-ji-shu-xie-hui-lan-mu",
+        "source": [
+          "/portal/list/index/id/39.html"
+        ],
+        "target": "/gdsrx/39"
+      }
+    ]
+  },
   "gdut.edu.cn": {
     "_name": "广东工业大学",
     "oas": [
@@ -10575,7 +10689,7 @@
       }
     ]
   },
-  "gogoanimehd.io": {
+  "anitaku.to": {
     "_name": "Gogoanime",
     "developer": [
       {
@@ -11756,7 +11870,7 @@
         "title": "通用",
         "docs": "https://docs.rsshub.app/routes/government#guo-jia-yao-pin-jian-du-guan-li-ju-yi-liao-qi-xie-biao-zhun-guan-li-zhong-xin",
         "source": [
-          "/*path"
+          "/*"
         ]
       }
     ]
@@ -12695,6 +12809,19 @@
           "/novel/:id"
         ],
         "target": "/hameln/chapter/:id"
+      }
+    ]
+  },
+  "harvard.edu": {
+    "_name": "Harvard University",
+    "www.health": [
+      {
+        "title": "Health Blog",
+        "docs": "https://docs.rsshub.app/routes/new-media#harvard-health-publishing",
+        "source": [
+          "/blog"
+        ],
+        "target": "/harvard/health/blog"
       }
     ]
   },
@@ -18551,6 +18678,19 @@
         "title": "电子书",
         "docs": "https://docs.rsshub.app/routes/reading#mobilism",
         "source": "/"
+      }
+    ]
+  },
+  "modb.pro": {
+    "_name": "墨天轮",
+    ".": [
+      {
+        "title": "合辑",
+        "docs": "https://docs.rsshub.app/routes/programming#mo-tian-lun",
+        "source": [
+          "/",
+          "/topic/:id"
+        ]
       }
     ]
   },
@@ -27279,7 +27419,7 @@
         "title": "热搜榜",
         "docs": "https://docs.rsshub.app/routes/social-media#wei-bo",
         "source": "/top/summary",
-        "target": "/weibo/search/hot"
+        "target": "/weibo/search/hot/:fulltext?"
       }
     ]
   },
