@@ -6588,6 +6588,13 @@
           "/list/:id",
           "/topic/newstopic/:id"
         ]
+      },
+      {
+        "title": "分类(网页爬虫方法)",
+        "docs": "https://docs.rsshub.app/routes/traditional-media#zhong-yang-tong-xun-she",
+        "source": [
+          "/list/:id"
+        ]
       }
     ]
   },
@@ -21557,12 +21564,12 @@
     "_name": "Phoronix",
     ".": [
       {
-        "title": "新闻与评测",
+        "title": "News & Reviews",
         "docs": "https://docs.rsshub.app/routes/new-media#phoronix",
         "source": [
-          "/*"
+          "/:category?/:topic?"
         ],
-        "target": "/phoronix/news"
+        "target": "/phoronix/:category?/:topic?"
       }
     ]
   },
