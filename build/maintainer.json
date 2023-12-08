@@ -4207,6 +4207,9 @@
         "nczitzk"
     ],
     "/kenshin/:category?/:type?": [],
+    "/kepu/live": [
+        "nczitzk"
+    ],
     "/keyakizaka46/blog": [],
     "/keyakizaka46/news": [],
     "/keylol/:path+": [
@@ -4905,6 +4908,9 @@
     "/nciae/news": [],
     "/nciae/tzgg": [],
     "/nciae/xsxx": [],
+    "/ncu/jwc": [
+        "ywh555hhh"
+    ],
     "/ncwu/note": [
         "vuhe"
     ],
@@ -7811,6 +7817,12 @@
     "/yahoo-jp-tv/:query": [],
     "/yahoo/news/:region/:category?": [
         "KeiLongW"
+    ],
+    "/yahoo/news/provider/:region/:providerId": [
+        "TonyRL"
+    ],
+    "/yahoo/news/providers/:region": [
+        "TonyRL"
     ],
     "/yande.re/post/popular_recent": [],
     "/yande.re/post/popular_recent/:period": [],

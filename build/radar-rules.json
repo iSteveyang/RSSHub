@@ -16883,6 +16883,19 @@
       }
     ]
   },
+  "kepu.net.cn": {
+    "_name": "中国科普博览",
+    "live": [
+      {
+        "title": "直播回看",
+        "docs": "https://docs.rsshub.app/routes/new-media#zhong-guo-ke-pu-bo-lan-zhi-bo-hui-kan",
+        "source": [
+          "/replay/index"
+        ],
+        "target": "/kepu/live"
+      }
+    ]
+  },
   "keylol.com": {
     "_name": "其乐",
     ".": [
@@ -17332,7 +17345,7 @@
   },
   "line.me": {
     "_name": "LINE",
-    ".": [
+    "today": [
       {
         "title": "Today",
         "docs": "https://docs.rsshub.app/routes/new-media#line-today",
@@ -19731,6 +19744,20 @@
           "/"
         ],
         "target": "/ncepu/master/pyxx"
+      }
+    ]
+  },
+  "ncu.edu.cn": {
+    "_name": "南昌大学",
+    ".": [
+      {
+        "title": "教务通知",
+        "docs": "https://docs.rsshub.app/routes/university#nan-chang-da-xue",
+        "source": [
+          "/",
+          "/jwtz/index.htm"
+        ],
+        "target": "/ncu/jwc"
       }
     ]
   },
@@ -30263,10 +30290,50 @@
   },
   "yahoo.com": {
     "_name": "Yahoo",
+    "hk.news": [
+      {
+        "title": "分類新聞",
+        "docs": "https://docs.rsshub.app/routes/new-media#yahoo",
+        "source": [
+          "/:category/archive",
+          "/archive"
+        ],
+        "target": "/yahoo/news/hk/:category?"
+      },
+      {
+        "title": "新聞來源",
+        "docs": "https://docs.rsshub.app/routes/new-media#yahoo",
+        "source": [
+          "/:providerId/archive",
+          "/archive"
+        ],
+        "target": "/yahoo/news/hk/:providerId"
+      }
+    ],
+    "tw.news": [
+      {
+        "title": "分類新聞",
+        "docs": "https://docs.rsshub.app/routes/new-media#yahoo",
+        "source": [
+          "/:category/archive",
+          "/archive"
+        ],
+        "target": "/yahoo/news/tw/:category?"
+      },
+      {
+        "title": "新聞來源",
+        "docs": "https://docs.rsshub.app/routes/new-media#yahoo",
+        "source": [
+          "/:providerId/archive",
+          "/archive"
+        ],
+        "target": "/yahoo/news/tw/:providerId"
+      }
+    ],
     ".": [
       {
         "title": "新闻",
-        "docs": "https://docs.rsshub.app/routes/traditional-media#yahoo",
+        "docs": "https://docs.rsshub.app/routes/new-media#yahoo",
         "source": [
           "/"
         ],
