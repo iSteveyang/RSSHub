@@ -1590,7 +1590,9 @@
         "Rjnishant530"
     ],
     "/dailyart/:language?": [],
-    "/damai/activity/:city/:category/:subcategory/:keyword?": [],
+    "/damai/activity/:city/:category/:subcategory/:keyword?": [
+        "hoilc"
+    ],
     "/daodu/:caty?": [],
     "/dapenti/subject/:id": [
         "xyqfer"
@@ -2085,6 +2087,9 @@
     "/ehentai/tag/:tag/:page?/:routeParams?": [
         "yindaheng98",
         "syrinka"
+    ],
+    "/ekantipur/:channel?": [
+        "maniche04"
     ],
     "/elasticsearch-cn/:params?": [
         "nczitzk"
@@ -3296,6 +3301,9 @@
     ],
     "/hubu/news/:type": [],
     "/hudongba/:city/:id": [],
+    "/huggingface/blog-zh": [
+        "zcf0508"
+    ],
     "/huggingface/daily-papers": [
         "zeyugao"
     ],
@@ -4980,6 +4988,9 @@
     "/one": [],
     "/onejav/:type/:key?": [],
     "/onenotegem/release": [],
+    "/onet/news": [
+        "Vegann"
+    ],
     "/oo-software/changelog/:id": [
         "nczitzk"
     ],
