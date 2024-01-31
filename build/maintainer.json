@@ -575,6 +575,9 @@
     "/atcoder/post/:language?/:keyword?": [
         "nczitzk"
     ],
+    "/auto-stats/:category?": [
+        "nczitzk"
+    ],
     "/autotrader/:query": [],
     "/av01/actor/:name/:type?": [],
     "/av01/tag/:name/:type?": [],
@@ -1279,6 +1282,9 @@
         "yanbot-team"
     ],
     "/chsi/zszcgd/:category?": [],
+    "/chuanliu/nice": [
+        "nczitzk"
+    ],
     "/chuapp/index/:category?": [],
     "/chuhaibiji": [],
     "/cia/foia-annual-report": [],
@@ -1401,6 +1407,9 @@
         "nczitzk"
     ],
     "/cnljxh/price/:id?": [
+        "nczitzk"
+    ],
+    "/cntheory/paper/:id?": [
         "nczitzk"
     ],
     "/cntv/:column": [
@@ -3980,6 +3989,9 @@
         "Dectinc",
         "DIYgod"
     ],
+    "/keepass": [
+        "TonyRL"
+    ],
     "/kemono/:source?/:id?": [
         "nczitzk"
     ],
@@ -4488,6 +4500,9 @@
         "TonyRL"
     ],
     "/modian/zhongchou/:category?/:sort?/:status?": [],
+    "/modrinth/project/:id/versions": [
+        "SettingDust"
+    ],
     "/mofish/:id": [],
     "/mohw/clarification": [
         "nczitzk"
@@ -4507,6 +4522,9 @@
     ],
     "/mrdx/today": [
         "Dustin-Jiang"
+    ],
+    "/mrm/:category?": [
+        "TonyRL"
     ],
     "/mubu/explore/:category?/:title?": [],
     "/muchong/:id/:type?/:sort?": [],
@@ -5162,6 +5180,9 @@
         "Fatpandac"
     ],
     "/parcel/hermesuk/:tracking": [],
+    "/parliament/section77/:type?": [
+        "itpcc"
+    ],
     "/patagonia/patagonia/new-arrivals/:category": [
         "EthanWng97"
     ],
@@ -5729,6 +5750,12 @@
     ],
     "/scmp/:category_id": [
         "proletarius101"
+    ],
+    "/scmp/coronavirus": [
+        "DIYgod"
+    ],
+    "/scmp/topics/:topic": [
+        "TonyRL"
     ],
     "/scnu/cs/match": [
         "fengkx"
