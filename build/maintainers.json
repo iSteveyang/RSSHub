@@ -3019,6 +3019,15 @@
   "/jou/yztzgg": [
     "real-jiakai"
   ],
+  "/jpxgmn/search/:kw": [
+    "Urabartin"
+  ],
+  "/jpxgmn/tab/:tab?": [
+    "Urabartin"
+  ],
+  "/jpxgmn/weekly": [
+    "Urabartin"
+  ],
   "/jseea/news/:type?": [
     "schen1024"
   ],
@@ -6120,9 +6129,6 @@
   ],
   "/zcool/user/:uid": [
     "junbaor"
-  ],
-  "/zhangyoubao/:category": [
-    "ztmzzz"
   ],
   "/zhibo8/forum/:id": [
     "LogicJake"
