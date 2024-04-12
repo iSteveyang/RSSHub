@@ -312,21 +312,6 @@
       }
     ]
   },
-  "500px.com.cn": {
-    "_name": "500px 摄影社区",
-    ".": [
-      {
-        "title": "摄影师作品",
-        "docs": "https://docs.rsshub.app/routes/picture",
-        "source": [
-          "/:id",
-          "/community/user-details/:id",
-          "/community/user-details/:id/*"
-        ],
-        "target": "/500px/user/works/:id"
-      }
-    ]
-  },
   "50forum.org.cn": {
     "_name": "经济 50 人论坛",
     ".": [
@@ -3401,6 +3386,14 @@
     "_name": "DCFever",
     ".": [
       {
+        "title": "新聞中心",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/news/index.php"
+        ],
+        "target": "/dcfever/news"
+      },
+      {
         "title": "測試報告",
         "docs": "https://docs.rsshub.app/routes/new-media",
         "source": [
@@ -4240,6 +4233,20 @@
           "/:locale/free-games"
         ],
         "target": "/epicgames/freegames/:locale"
+      }
+    ]
+  },
+  "esquirehk.com": {
+    "_name": "Esquire Hong Kong",
+    "www": [
+      {
+        "title": "Tag",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/tag/:id",
+          "/:id"
+        ],
+        "target": "/esquirehk/tag/:id?"
       }
     ]
   },
@@ -6308,6 +6315,19 @@
           "/category/:category"
         ],
         "target": "/hit/today/:category"
+      }
+    ]
+  },
+  "hitcon.org": {
+    "_name": "HITCON",
+    "zeroday": [
+      {
+        "title": "漏洞",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/vulnerability/:status"
+        ],
+        "target": "/hitcon/zeroday/vulnerability/:status?"
       }
     ]
   },
@@ -10366,8 +10386,8 @@
     "_name": "Instagram",
     ".": [
       {
-        "title": "Unknown",
-        "docs": "https://docs.rsshub.app/routes/other",
+        "title": "User Profile - Picnob",
+        "docs": "https://docs.rsshub.app/routes/social-media",
         "source": [
           "/profile/:id/*"
         ],
