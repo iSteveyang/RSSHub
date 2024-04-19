@@ -1441,6 +1441,9 @@
     "nczitzk",
     "TonyRL"
   ],
+  "/dehenglaw/:language?/:category?": [
+    "nczitzk"
+  ],
   "/deltaio/blog": [
     "RengarLee"
   ],
@@ -4706,6 +4709,9 @@
   "/samsung/research/blog": [
     "nczitzk"
   ],
+  "/sara/:type": [
+    "HChenZi"
+  ],
   "/saraba1st/digest/:tid": [
     "shinemoon"
   ],
@@ -5402,7 +5408,7 @@
   "/tesla/price": [
     "xiaokyo"
   ],
-  "/test/:id": [
+  "/test/:id/:params?": [
     "DIYgod",
     "NeverBehave"
   ],
