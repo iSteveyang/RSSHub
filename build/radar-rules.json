@@ -5123,6 +5123,19 @@
       }
     ]
   },
+  "famitsu.com": {
+    "_name": "ファミ通",
+    "www": [
+      {
+        "title": "Category",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/category/:category/page/1"
+        ],
+        "target": "/famitsu/category/:category?"
+      }
+    ]
+  },
   "fanqienovel.com": {
     "_name": "番茄小说",
     ".": [
@@ -17188,6 +17201,14 @@
           "/p/:id/super_index"
         ],
         "target": "/weibo/super_index/:id"
+      },
+      {
+        "title": "用户收藏动态",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/"
+        ],
+        "target": "/weibo/user_bookmarks/:uid"
       }
     ],
     "s": [
@@ -17373,6 +17394,19 @@
           "/apps/:appId"
         ],
         "target": "/winstall/:appId"
+      }
+    ]
+  },
+  "wired.com": {
+    "_name": "WIRED",
+    "www": [
+      {
+        "title": "Tags",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/tag/:tag/"
+        ],
+        "target": "/wired/tag/:tag"
       }
     ]
   },
