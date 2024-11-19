@@ -215,9 +215,7 @@
   "/6v123/latestTVSeries": [
     "tc9011"
   ],
-  "/78dm/:category{.+}?": [
-    "nczitzk"
-  ],
+  "/78dm*": [],
   "/7mmtv/:language?/:category?/:type?": [
     "nczitzk"
   ],
@@ -357,12 +355,6 @@
   "/aip/:pub/:jrn": [
     "Derekmini",
     "auto-bot-ty"
-  ],
-  "/air-level/air/:area": [
-    "lifetraveler"
-  ],
-  "/air-level/rank/:status?": [
-    "lifetraveler"
   ],
   "/airchina/announcement": [
     "LandonLi"
@@ -4063,7 +4055,7 @@
     "bigfei"
   ],
   "/linkresearcher/:params": [
-    "y9c"
+    "yech1990"
   ],
   "/linovelib/novel/:id": [
     "misakicoca"
@@ -5147,9 +5139,6 @@
     "AntiKnot"
   ],
   "/patagonia/new-arrivals/:category": [],
-  "/patreon/:creator": [
-    "TonyRL"
-  ],
   "/paulgraham/articles": [
     "Maecenas",
     "nczitzk"
