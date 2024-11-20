@@ -15279,6 +15279,19 @@
       }
     ]
   },
+  "idolmaster-official.jp": {
+    "_name": "アイドルマスター THE IDOLM@STER",
+    ".": [
+      {
+        "title": "ニュース News",
+        "docs": "https://docs.rsshub.app/routes/anime",
+        "source": [
+          "/news"
+        ],
+        "target": "/idolmaster/news"
+      }
+    ]
+  },
   "idolypride.jp": {
     "_name": "IDOLY PRIDE 偶像荣耀",
     ".": [
@@ -29748,6 +29761,19 @@
           "/"
         ],
         "target": "/woshipm/wen"
+      }
+    ]
+  },
+  "wufazhuce.com": {
+    "_name": "「ONE · 一个」",
+    ".": [
+      {
+        "title": "「ONE · 一个」",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/"
+        ],
+        "target": "/wufazhuce/one"
       }
     ]
   },
