@@ -25552,30 +25552,50 @@
   },
   "shu.edu.cn": {
     "_name": "上海大学",
+    "global": [
+      {
+        "title": "国际部港澳台办公室",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/"
+        ],
+        "target": "/shu/global"
+      }
+    ],
+    "gs": [
+      {
+        "title": "研究生院",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/"
+        ],
+        "target": "/shu/gs"
+      }
+    ],
     "www": [
       {
-        "title": "官网信息",
+        "title": "官网通知公告",
         "docs": "https://docs.rsshub.app/routes/university",
         "source": [
-          "/:type"
+          "/"
         ],
-        "target": "/shu/:type"
+        "target": "/shu/news"
       },
       {
-        "title": "Unknown",
+        "title": "教务部",
         "docs": "https://docs.rsshub.app/routes/university",
         "source": [
-          "/:type"
+          "/index"
         ],
-        "target": "/shu/:type"
+        "target": "/shu/:type?"
       },
       {
-        "title": "Unknown",
+        "title": "校园看点",
         "docs": "https://docs.rsshub.app/routes/university",
         "source": [
-          "/:type"
+          "/"
         ],
-        "target": "/shu/:type"
+        "target": "/shu/xykd"
       }
     ]
   },
@@ -28006,43 +28026,28 @@
       }
     ]
   },
-  "taptap.com": {
-    "_name": "TapTap 中国",
+  "taptap.cn": {
+    "_name": "TapTap",
+    "www": [
+      {
+        "title": "游戏更新",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/app/:id"
+        ],
+        "target": "/taptap/changelog/:id"
+      },
+      {
+        "title": "游戏评价",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/app/:id/review",
+          "/app/:id"
+        ],
+        "target": "/taptap/review/:id"
+      }
+    ],
     ".": [
-      {
-        "title": "游戏更新",
-        "docs": "https://docs.rsshub.app/routes/game",
-        "source": [
-          "/app/:id"
-        ],
-        "target": "/taptap/changelog/:id"
-      },
-      {
-        "title": "游戏更新",
-        "docs": "https://docs.rsshub.app/routes/game",
-        "source": [
-          "/app/:id"
-        ],
-        "target": "/taptap/changelog/:id"
-      },
-      {
-        "title": "游戏评价",
-        "docs": "https://docs.rsshub.app/routes/game",
-        "source": [
-          "/app/:id/review",
-          "/app/:id"
-        ],
-        "target": "/taptap/review/:id"
-      },
-      {
-        "title": "游戏评价",
-        "docs": "https://docs.rsshub.app/routes/game",
-        "source": [
-          "/app/:id/review",
-          "/app/:id"
-        ],
-        "target": "/taptap/review/:id"
-      },
       {
         "title": "游戏论坛",
         "docs": "https://docs.rsshub.app/routes/game",
@@ -28051,6 +28056,28 @@
           "/app/:id"
         ],
         "target": "/taptap/topic/:id"
+      }
+    ]
+  },
+  "taptap.io": {
+    "_name": "TapTap",
+    "www": [
+      {
+        "title": "Game's Changelog",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/app/:id"
+        ],
+        "target": "/taptap/intl/changelog/:id"
+      },
+      {
+        "title": "Ratings & Reviews",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/app/:id/review",
+          "/app/:id"
+        ],
+        "target": "/taptap/intl/review/:id"
       }
     ]
   },
