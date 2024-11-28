@@ -82280,15 +82280,16 @@
       }
     },
     "name": "PetCity 毛孩日常",
-    "url": "thepetcity.com",
-    "lang": "en"
+    "url": "thepetcity.co",
+    "lang": "zh-TW"
   },
   "theverge": {
     "routes": {
       "/:hub?": {
         "path": "/:hub?",
         "categories": [
-          "new-media"
+          "new-media",
+          "popular"
         ],
         "example": "/theverge",
         "parameters": {
