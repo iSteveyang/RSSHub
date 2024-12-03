@@ -78,7 +78,7 @@
         "dayjs": "1.11.8",
         "destr": "2.0.3",
         "directory-import": "3.3.1",
-        "dotenv": "16.4.5",
+        "dotenv": "16.4.6",
         "entities": "5.0.0",
         "etag": "1.8.1",
         "fanfou-sdk": "5.0.0",
@@ -167,8 +167,8 @@
         "@types/tiny-async-pool": "2.0.3",
         "@types/title": "3.4.3",
         "@types/uuid": "10.0.0",
-        "@typescript-eslint/eslint-plugin": "8.16.0",
-        "@typescript-eslint/parser": "8.16.0",
+        "@typescript-eslint/eslint-plugin": "8.17.0",
+        "@typescript-eslint/parser": "8.17.0",
         "@vercel/nft": "0.27.7",
         "@vitest/coverage-v8": "2.0.5",
         "discord-api-types": "0.37.110",
@@ -197,7 +197,7 @@
         "vitest": "2.0.5",
         "yaml-eslint-parser": "1.2.3"
     },
-    "packageManager": "pnpm@9.12.3",
+    "packageManager": "pnpm@9.14.4",
     "engines": {
         "node": ">=22"
     },
