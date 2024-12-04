@@ -37710,12 +37710,30 @@
       "/topic/:topic?/:type?": {
         "path": "/topic/:topic?/:type?",
         "categories": [
-          "new-media"
+          "new-media",
+          "popular"
         ],
-        "example": "/hbr/topic/leadership",
+        "example": "/hbr/topic/Leadership/Popular",
         "parameters": {
           "topic": "Topic, can be found in URL, Leadership by default",
-          "type": "Type, see below, Latest by default"
+          "type": {
+            "description": "Type, see below, Popular by default",
+            "options": [
+              {
+                "value": "Popular",
+                "label": "Popular"
+              },
+              {
+                "value": "From the Store",
+                "label": "From the Store"
+              },
+              {
+                "value": "For You",
+                "label": "For You"
+              }
+            ],
+            "default": "Popular"
+          }
         },
         "features": {
           "requireConfig": false,
@@ -37735,9 +37753,10 @@
         ],
         "name": "Topic",
         "maintainers": [
-          "nczitzk"
+          "nczitzk",
+          "pseudoyu"
         ],
-        "description": "| LATEST | POPULAR | FROM THE STORE | FOR YOU |\n  | ------ | ------- | -------------- | ------- |\n  | Latest | Popular | From the Store | For You |\n\n  :::tip\n  Click here to view [All Topics](https://hbr.org/topics)\n  :::",
+        "description": "| POPULAR | FROM THE STORE | FOR YOU |\n  | ------- | -------------- | ------- |\n  | Popular | From the Store | For You |\n\n  :::tip\n  Click here to view [All Topics](https://hbr.org/topics)\n  :::",
         "location": "topic.ts"
       }
     },
@@ -49903,12 +49922,47 @@
         ],
         "name": "日报",
         "maintainers": [
-          "LogicJake ",
-          "prnake ",
+          "LogicJake",
+          "prnake",
           "nczitzk"
         ],
         "url": "luogu.com.cn/discuss/47327",
         "location": "daily.ts"
+      },
+      "/user/article/:uid": {
+        "path": "/user/article/:uid",
+        "categories": [
+          "programming"
+        ],
+        "example": "/luogu/user/article/1",
+        "parameters": {
+          "name": "用户 UID"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "luogu.com/user/:uid"
+            ]
+          },
+          {
+            "source": [
+              "luogu.com.cn/user/:uid"
+            ]
+          }
+        ],
+        "name": "用户文章",
+        "maintainers": [
+          "TonyRL"
+        ],
+        "location": "user-article.ts"
       },
       "/user/blog/:name": {
         "path": "/user/blog/:name",
@@ -49930,12 +49984,19 @@
         "radar": [
           {
             "source": [
+              "luogu.com/blog/:name"
+            ]
+          },
+          {
+            "source": [
               "luogu.com.cn/blog/:name"
             ]
           }
         ],
         "name": "用户博客",
-        "maintainers": [],
+        "maintainers": [
+          "ftiasch"
+        ],
         "location": "user-blog.ts"
       },
       "/user/feed/:uid": {
@@ -49956,6 +50017,11 @@
           "supportScihub": false
         },
         "radar": [
+          {
+            "source": [
+              "luogu.com/user/:uid"
+            ]
+          },
           {
             "source": [
               "luogu.com.cn/user/:uid"
@@ -74616,8 +74682,10 @@
       "/show/:id": {
         "path": "/show/:id",
         "categories": [
-          "multimedia"
+          "multimedia",
+          "popular"
         ],
+        "view": 4,
         "example": "/spotify/show/5CfCWKI5pZ28U0uOzXkDHe",
         "parameters": {
           "id": "Show ID"
@@ -74646,9 +74714,10 @@
             ]
           }
         ],
-        "name": "Show",
+        "name": "Show/Podcasts",
         "maintainers": [
-          "caiohsramos"
+          "caiohsramos",
+          "pseudoyu"
         ],
         "location": "show.ts"
       },
@@ -93046,6 +93115,41 @@
     "name": "月幕 Galgame",
     "url": "ymgal.games",
     "lang": "zh-CN"
+  },
+  "yna": {
+    "routes": {
+      "/:lang?/:channel?": {
+        "path": "/:lang?/:channel?",
+        "categories": [
+          "traditional-media"
+        ],
+        "example": "/yna/en/national",
+        "parameters": {
+          "lang": "Language, see below, `ko` by default",
+          "channel": "RSS Feed Channel, see below, `news` by default"
+        },
+        "features": {
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false,
+          "requireConfig": false
+        },
+        "name": "News",
+        "maintainers": [
+          "quiniapiezoelectricity"
+        ],
+        "description": "\n| Language  | 한국어 | English | 简体中文 | 日本語 | عربي   | Español | Français |\n| --------- | ------ | ------- | -------- | ------ | ------ | ------- | -------- |\n| `:lang` | `ko` | `en`  | `cn`   | `jp` | `ar` | `es`  | `fr`   |\n\nFor a full list of RSS Feed Channels, please refer to the RSS feed page of the corresponding language\n| RSS Feed Page                                             |\n| --------------------------------------------------------- |\n| [한국어](https://www.yna.co.kr/rss/index?site=footer_rss) |\n| [English](https://en.yna.co.kr/channel/index)             |\n| [简体中文](https://cn.yna.co.kr/channel/index)            |\n| [日本語](https://jp.yna.co.kr/channel/index)              |\n| [عربي](https://ar.yna.co.kr/channel/index)                |\n| [Español](https://sp.yna.co.kr/channel/index)             |\n| [Français](https://fr.yna.co.kr/channel/index)            |\n\n:::tip\nFor example, the path for the RSS feed url https://www.yna.co.kr/rss/economy.xml and https://cn.yna.co.kr/RSS/news.xml would be `/ko/economy` and `/cn/news` respectively. \n:::\n",
+        "location": "index.ts"
+      }
+    },
+    "name": "Yonhap News Agency",
+    "url": "yna.co.kr",
+    "lang": "ko",
+    "zh": {
+      "name": "韩联社"
+    }
   },
   "yoasobi-music": {
     "routes": {
