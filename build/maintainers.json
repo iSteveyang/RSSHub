@@ -1185,6 +1185,9 @@
   "/cccfna/:category/:type?": [
     "hualiong"
   ],
+  "/cccmc/:category{.+}?": [
+    "nczitzk"
+  ],
   "/ccf/news/:category?": [
     "nczitzk"
   ],
@@ -2596,8 +2599,9 @@
   "/genossenschaften*": [
     "sk22"
   ],
-  "/geocaching/blogs": [
-    "HankChow"
+  "/geocaching/blogs/:language?": [
+    "HankChow",
+    "Konano"
   ],
   "/getdr/": [
     "nczitzk"
@@ -5267,6 +5271,9 @@
     "xueli_sherryli"
   ],
   "/oschina/column/:id": [
+    "nczitzk"
+  ],
+  "/oschina/event/:category?": [
     "nczitzk"
   ],
   "/oschina/news/:category?": [
