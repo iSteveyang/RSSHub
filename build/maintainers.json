@@ -182,6 +182,12 @@
   "/4gamers/topic/:topic": [
     "bestpika"
   ],
+  "/4khd/category/:category": [
+    "AiraNadih"
+  ],
+  "/4khd/": [
+    "AiraNadih"
+  ],
   "/4ksj/:id?": [
     "nczitzk"
   ],
@@ -1052,6 +1058,15 @@
   ],
   "/buaa/news/:type": [
     "AlanDecode"
+  ],
+  "/buct/cist": [
+    "Epic-Creeper"
+  ],
+  "/buct/gr/:type": [
+    "Epic-Creeper"
+  ],
+  "/buct/jwc": [
+    "Epic-Creeper"
   ],
   "/bugzilla/bug/:site/:bugId": [
     "FranklinYu"
@@ -4207,8 +4222,15 @@
   "/lala/": [
     "cnkmmk"
   ],
+  "/landiannews/category/:slug": [
+    "cscnk52"
+  ],
   "/landiannews/": [
-    "nczitzk"
+    "nczitzk",
+    "cscnk52"
+  ],
+  "/landiannews/tag/:slug": [
+    "cscnk52"
   ],
   "/lang/live/room/:id": [
     "MittWillson"
