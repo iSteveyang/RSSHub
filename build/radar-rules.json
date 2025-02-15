@@ -20731,6 +20731,20 @@
       }
     ]
   },
+  "mashiro.best": {
+    "_name": "Mashiro's Baumkuchen",
+    ".": [
+      {
+        "title": "Blog",
+        "docs": "https://docs.rsshub.app/routes/blog",
+        "source": [
+          "/",
+          "/:lang/"
+        ],
+        "target": "/mashiro/:lang"
+      }
+    ]
+  },
   "matters.town": {
     "_name": "Matters",
     ".": [
@@ -27534,16 +27548,24 @@
       }
     ]
   },
-  "piokok.com": {
+  "pixwox.com": {
     "_name": "Instagram",
     ".": [
       {
         "title": "User Profile - Picnob",
         "docs": "https://docs.rsshub.app/routes/social-media",
         "source": [
-          "/profile/:id/*"
+          "/profile/:id"
         ],
         "target": "/picnob/user/:id"
+      },
+      {
+        "title": "User Profile - Picnob",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/profile/:id/tagged"
+        ],
+        "target": "/picnob/user/:id/tagged"
       }
     ]
   },
