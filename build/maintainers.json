@@ -4076,6 +4076,12 @@
   "/jornada/:date?/:category?": [
     "Thealf154"
   ],
+  "/joshwcomeau/latest/:category?": [
+    "Rjnishant530"
+  ],
+  "/joshwcomeau/popular": [
+    "Rjnishant530"
+  ],
   "/jou/tzgg": [
     "real-jiakai"
   ],
@@ -6850,6 +6856,9 @@
     "nczitzk"
   ],
   "/szse/rule/:channel{.+}?": [
+    "nczitzk"
+  ],
+  "/szse/disclosure/listed/notice": [
     "nczitzk"
   ],
   "/szu/yz/:type?": [

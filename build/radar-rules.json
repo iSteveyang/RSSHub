@@ -19326,6 +19326,35 @@
       }
     ]
   },
+  "joshwcomeau.com": {
+    "_name": "Josh W Comeau",
+    ".": [
+      {
+        "title": "Articles and Tutorials",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/"
+        ],
+        "target": "/joshwcomeau/latest"
+      },
+      {
+        "title": "Articles and Tutorials",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/:category"
+        ],
+        "target": "/joshwcomeau/latest/:category"
+      },
+      {
+        "title": "Popular Content",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/"
+        ],
+        "target": "/joshwcomeau/popular"
+      }
+    ]
+  },
   "jou.edu.cn": {
     "_name": "江苏海洋大学",
     "www": [
@@ -32811,6 +32840,14 @@
           "/www/lawrules/rule/repeal/rules/index.html"
         ],
         "target": "/szse/rule/repeal/rules"
+      },
+      {
+        "title": "上市公司公告",
+        "docs": "https://docs.rsshub.app/routes/finance",
+        "source": [
+          "/disclosure/listed/notice/index.html"
+        ],
+        "target": "/szse/disclosure/listed/notice"
       }
     ]
   },
