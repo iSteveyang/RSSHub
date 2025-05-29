@@ -8624,7 +8624,8 @@
   ],
   "/zhihu/hot/:category?": [
     "nczitzk",
-    "pseudoyu"
+    "pseudoyu",
+    "DIYgod"
   ],
   "/zhihu/posts/:usertype/:id": [
     "whtsky",
