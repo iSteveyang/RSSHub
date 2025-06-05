@@ -3036,7 +3036,8 @@
       "/hot-list/:category?": {
         "path": "/hot-list/:category?",
         "categories": [
-          "new-media"
+          "new-media",
+          "popular"
         ],
         "example": "/36kr/hot-list",
         "parameters": {
@@ -18204,8 +18205,7 @@
       "/weekly": {
         "path": "/weekly",
         "categories": [
-          "traditional-media",
-          "popular"
+          "traditional-media"
         ],
         "example": "/caixin/weekly",
         "radar": [
@@ -33663,6 +33663,135 @@
     "url": "www.eventernote.com",
     "lang": "ja"
   },
+  "everia": {
+    "routes": {
+      "/category/:category": {
+        "path": "/category/:category",
+        "categories": [
+          "picture"
+        ],
+        "example": "/everia/category/cosplay",
+        "parameters": {
+          "category": "Category of the image stream"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "everia.club/category/:category"
+            ],
+            "target": "/category/:category"
+          }
+        ],
+        "name": "Images with category",
+        "maintainers": [
+          "KTachibanaM",
+          "AiraNadih"
+        ],
+        "location": "category.ts",
+        "module": "() => import('@/routes/everia/category.ts')"
+      },
+      "/": {
+        "path": "/",
+        "categories": [
+          "picture"
+        ],
+        "example": "/everia",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "everia.club/"
+            ],
+            "target": ""
+          }
+        ],
+        "name": "Latest",
+        "maintainers": [
+          "KTachibanaM",
+          "AiraNadih"
+        ],
+        "location": "latest.ts",
+        "module": "() => import('@/routes/everia/latest.ts')"
+      },
+      "/search/:keyword": {
+        "path": "/search/:keyword",
+        "categories": [
+          "picture"
+        ],
+        "example": "/everia/search/日向坂46",
+        "parameters": {
+          "keyword": "Keyword"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "Search",
+        "maintainers": [
+          "KTachibanaM",
+          "AiraNadih"
+        ],
+        "location": "search.ts",
+        "module": "() => import('@/routes/everia/search.ts')"
+      },
+      "/tag/:tag": {
+        "path": "/tag/:tag",
+        "categories": [
+          "picture"
+        ],
+        "example": "/everia/tag/hinatazaka46-日向坂46",
+        "parameters": {
+          "tag": "Tag of the image stream"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "everia.club/tag/:tag"
+            ],
+            "target": "/tag/:tag"
+          }
+        ],
+        "name": "Images with tag",
+        "maintainers": [
+          "KTachibanaM",
+          "AiraNadih"
+        ],
+        "location": "tag.ts",
+        "module": "() => import('@/routes/everia/tag.ts')"
+      }
+    },
+    "name": "EVERIA.CLUB",
+    "apiRoutes": {},
+    "url": "everia.club"
+  },
   "f-droid": {
     "routes": {
       "/apprelease/:app": {
@@ -40229,6 +40358,58 @@
   },
   "go": {
     "routes": {
+      "/jihs/idwr/:year?": {
+        "path": "/jihs/idwr/:year?",
+        "name": "感染症発生動向調査週報",
+        "url": "id-info.jihs.go.jp",
+        "maintainers": [
+          "nczitzk"
+        ],
+        "example": "/go/jihs/idwr/2025",
+        "parameters": {
+          "year": {
+            "description": "Year, current year by default"
+          }
+        },
+        "description": ":::tip\nTo subscribe to [感染症発生動向調査週報](https://id-info.jihs.go.jp/surveillance/idwr/jp/idwr/2025/), where the source URL is `https://id-info.jihs.go.jp/surveillance/idwr/jp/idwr/2025/`, extract the certain parts from this URL to be used as parameters, resulting in the route as [`/go/jihs/idwr/2025`](https://rsshub.app/go/jihs/idwr/2025).\n:::\n",
+        "categories": [
+          "government"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "id-info.jihs.go.jp/surveillance/idwr/jp/idwr/:year"
+            ]
+          }
+        ],
+        "view": 0,
+        "zh": {
+          "path": "/jihs/idwr/:year?",
+          "name": "传染病发生动向调查周报",
+          "url": "id-info.jihs.go.jp",
+          "maintainers": [
+            "nczitzk"
+          ],
+          "example": "/go/jihs/idwr/2025",
+          "parameters": {
+            "year": {
+              "description": "年份，默认为当前年份，可在对应页 URL 中找到"
+            }
+          },
+          "description": ":::tip\n若订阅 [传染病发生动向调查周报](https://id-info.jihs.go.jp/surveillance/idwr/jp/idwr/2025/)，网址为 `https://id-info.jihs.go.jp/surveillance/idwr/jp/idwr/2025/`，请截取 `https://id-info.jihs.go.jp/surveillance/idwr/jp/idwr/` 到末尾 `/` 的部分 `2025` 作为 `year` 参数填入，此时目标路由为 [`/go/jihs/idwr/2025`](https://rsshub.app/go/jihs/idwr/2025)。\n:::\n"
+        },
+        "location": "jihs/idwr.ts",
+        "module": "() => import('@/routes/go/jihs/idwr.ts')"
+      },
       "/mhlw/pdf/:category{.+}?": {
         "path": "/mhlw/pdf/:category{.+}?",
         "name": "PDF",
@@ -40262,40 +40443,6 @@
         ],
         "location": "mhlw/pdf.ts",
         "module": "() => import('@/routes/go/mhlw/pdf.ts')"
-      },
-      "/niid/idwr-dl/:year?": {
-        "path": "/niid/idwr-dl/:year?",
-        "name": "感染症発生動向調査週報ダウンロード",
-        "url": "www.niid.go.jp",
-        "maintainers": [
-          "nczitzk"
-        ],
-        "example": "/go/niid/idwr-dl/:year?",
-        "parameters": {
-          "year": "Year, current year by default"
-        },
-        "description": "::: tip\n  If you subscribe to [感染症発生動向調査週報ダウンロード2024年](https://www.niid.go.jp/niid/ja/idwr-dl/2024.html)，where the URL is `https://www.niid.go.jp/niid/ja/idwr-dl/2024.html`, extract the part `https://www.niid.go.jp/niid/ja/idwr-dl/` to the end, which is `.html`, and use it as the parameter to fill in. Therefore, the route will be [`/go/niid/idwr-dl/2024`](https://rsshub.app/go/niid/idwr-dl/2024).\n:::",
-        "categories": [
-          "government"
-        ],
-        "features": {
-          "requireConfig": false,
-          "requirePuppeteer": false,
-          "antiCrawler": false,
-          "supportRadar": true,
-          "supportBT": false,
-          "supportPodcast": false,
-          "supportScihub": false
-        },
-        "radar": [
-          {
-            "source": [
-              "www.niid.go.jp/niid/ja/idwr-dl/:year"
-            ]
-          }
-        ],
-        "location": "niid/idwr-dl.ts",
-        "module": "() => import('@/routes/go/niid/idwr-dl.ts')"
       }
     },
     "name": "JapanGov",
@@ -40409,7 +40556,8 @@
       "/:kind?": {
         "path": "/:kind?",
         "categories": [
-          "program-update"
+          "program-update",
+          "popular"
         ],
         "example": "/gofans",
         "parameters": {
@@ -59057,7 +59205,10 @@
   "konachan": {
     "routes": {
       "/post/popular_recent/:period?": {
-        "path": "/post/popular_recent/:period?",
+        "path": [
+          "/post/popular_recent/:period?",
+          "/sfw/post/popular_recent/:period?"
+        ],
         "categories": [
           "picture",
           "popular"
@@ -59086,19 +59237,82 @@
               }
             ],
             "default": "1d"
+          },
+          "safe_search": {
+            "description": "是否使用无r18的站点konachan.net，若是,则在路径前加上 `/sfw`，如`/konachan/sfw/post/popular_recent/1d`，若否则默认使用 konachan.com",
+            "default": "false"
           }
         },
         "radar": [
           {
             "source": [
-              "konachan.com/post"
+              "konachan.com/post",
+              "konachan.net/post"
             ]
           }
         ],
         "name": "Popular Recent Posts",
         "maintainers": [
           "magic-akari",
-          "NekoAria"
+          "NekoAria",
+          "sineeeee"
+        ],
+        "description": "| 最近 24 小时    | 最近一周     | 最近一月    | 最近一年     |\n| ------- | -------- | ------- | -------- |\n| 1d | 1w | 1m | 1y |",
+        "location": "post.ts",
+        "module": "() => import('@/routes/konachan/post.ts')"
+      },
+      "/sfw/post/popular_recent/:period?": {
+        "path": [
+          "/post/popular_recent/:period?",
+          "/sfw/post/popular_recent/:period?"
+        ],
+        "categories": [
+          "picture",
+          "popular"
+        ],
+        "view": 2,
+        "example": "/konachan/post/popular_recent/1d",
+        "parameters": {
+          "period": {
+            "description": "展示时间",
+            "options": [
+              {
+                "value": "1d",
+                "label": "最近 24 小时"
+              },
+              {
+                "value": "1w",
+                "label": "最近一周"
+              },
+              {
+                "value": "1m",
+                "label": "最近一月"
+              },
+              {
+                "value": "1y",
+                "label": "最近一年"
+              }
+            ],
+            "default": "1d"
+          },
+          "safe_search": {
+            "description": "是否使用无r18的站点konachan.net，若是,则在路径前加上 `/sfw`，如`/konachan/sfw/post/popular_recent/1d`，若否则默认使用 konachan.com",
+            "default": "false"
+          }
+        },
+        "radar": [
+          {
+            "source": [
+              "konachan.com/post",
+              "konachan.net/post"
+            ]
+          }
+        ],
+        "name": "Popular Recent Posts",
+        "maintainers": [
+          "magic-akari",
+          "NekoAria",
+          "sineeeee"
         ],
         "description": "| 最近 24 小时    | 最近一周     | 最近一月    | 最近一年     |\n| ------- | -------- | ------- | -------- |\n| 1d | 1w | 1m | 1y |",
         "location": "post.ts",
@@ -76272,8 +76486,7 @@
       "/news": {
         "path": "/news",
         "categories": [
-          "new-media",
-          "popular"
+          "new-media"
         ],
         "example": "/panewslab/news",
         "radar": [
@@ -83534,7 +83747,8 @@
       "/daily": {
         "path": "/daily",
         "categories": [
-          "new-media"
+          "new-media",
+          "popular"
         ],
         "example": "/readhub/daily",
         "parameters": {},
@@ -109422,8 +109636,7 @@
       "/latest": {
         "path": "/latest",
         "categories": [
-          "shopping",
-          "popular"
+          "shopping"
         ],
         "example": "/xiaomiyoupin/latest",
         "parameters": {},
