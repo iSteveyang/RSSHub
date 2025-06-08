@@ -12836,6 +12836,124 @@ export default {
     "url": "bangumi.tv",
     "lang": "zh-CN"
   },
+  "banyuetan": {
+    "routes": {
+      "/:id?": {
+        "path": "/:id?",
+        "name": "栏目",
+        "url": "www.banyuetan.org",
+        "maintainers": [
+          "nczitzk"
+        ],
+        "example": "/banyuetan/jinritan",
+        "parameters": {
+          "id": {
+            "description": "栏目 ID，默认为 `jinritan`，即今日谈，可在对应分类页 URL 中找到",
+            "options": [
+              {
+                "label": "今日谈",
+                "value": "jinritan"
+              },
+              {
+                "label": "时政讲解",
+                "value": "shizhengjiangjie"
+              },
+              {
+                "label": "评论",
+                "value": "banyuetanpinglun"
+              },
+              {
+                "label": "基层治理",
+                "value": "jicengzhili"
+              },
+              {
+                "label": "文化",
+                "value": "wenhua"
+              },
+              {
+                "label": "教育",
+                "value": "jiaoyu"
+              }
+            ]
+          }
+        },
+        "description": ":::tip\n订阅 [今日谈](http://www.banyuetan.org/byt/jinritan/)，其源网址为 `http://www.banyuetan.org/byt/jinritan/`，请参考该 URL 指定部分构成参数，此时路由为 [`/banyuetan/jinritan`](https://rsshub.app/banyuetan/jinritan)。\n:::\n\n| 栏目                                                                 | ID                                                                |\n| -------------------------------------------------------------------- | ----------------------------------------------------------------- |\n| [今日谈](http://www.banyuetan.org/byt/jinritan/index.html)           | [jinritan](https://rsshub.app/banyuetan/jinritan)                 |\n| [时政讲解](http://www.banyuetan.org/byt/shizhengjiangjie/index.html) | [shizhengjiangjie](https://rsshub.app/banyuetan/shizhengjiangjie) |\n| [评论](http://www.banyuetan.org/byt/banyuetanpinglun/index.html)     | [banyuetanpinglun](https://rsshub.app/banyuetan/banyuetanpinglun) |\n| [基层治理](http://www.banyuetan.org/byt/jicengzhili/index.html)      | [jicengzhili](https://rsshub.app/banyuetan/jicengzhili)           |\n| [文化](http://www.banyuetan.org/byt/wenhua/index.html)               | [wenhua](https://rsshub.app/banyuetan/wenhua)                     |\n| [教育](http://www.banyuetan.org/byt/jiaoyu/index.html)               | [jiaoyu](https://rsshub.app/banyuetan/jiaoyu)                     |\n\n",
+        "categories": [
+          "traditional-media"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.banyuetan.org/byt/:id"
+            ],
+            "target": "/:id"
+          },
+          {
+            "title": "今日谈",
+            "source": [
+              "www.banyuetan.org/byt/jinritan/index.html"
+            ],
+            "target": "/jinritan"
+          },
+          {
+            "title": "时政讲解",
+            "source": [
+              "www.banyuetan.org/byt/shizhengjiangjie/index.html"
+            ],
+            "target": "/shizhengjiangjie"
+          },
+          {
+            "title": "评论",
+            "source": [
+              "www.banyuetan.org/byt/banyuetanpinglun/index.html"
+            ],
+            "target": "/banyuetanpinglun"
+          },
+          {
+            "title": "基层治理",
+            "source": [
+              "www.banyuetan.org/byt/jicengzhili/index.html"
+            ],
+            "target": "/jicengzhili"
+          },
+          {
+            "title": "文化",
+            "source": [
+              "www.banyuetan.org/byt/wenhua/index.html"
+            ],
+            "target": "/wenhua"
+          },
+          {
+            "title": "教育",
+            "source": [
+              "www.banyuetan.org/byt/jiaoyu/index.html"
+            ],
+            "target": "/jiaoyu"
+          }
+        ],
+        "view": 0,
+        "location": "index.ts",
+        "module": () => import('@/routes/banyuetan/index.ts')
+      }
+    },
+    "name": "半月谈",
+    "apiRoutes": {},
+    "url": "banyuetan.org",
+    "categories": [
+      "traditional-media"
+    ],
+    "description": "",
+    "lang": "zh-CN"
+  },
   "baobua": {
     "routes": {
       "/category/:category": {
@@ -22439,6 +22557,29 @@ export default {
     "name": "中国作家网",
     "apiRoutes": {},
     "url": "chinawriter.com.cn",
+    "lang": "zh-CN"
+  },
+  "chiphell": {
+    "routes": {
+      "/portal/:catId?": {
+        "path": "/portal/:catId?",
+        "name": "分类",
+        "categories": [
+          "bbs"
+        ],
+        "example": "/chiphell/portal/1",
+        "parameters": {
+          "catId": "分类 ID，可在 URL 中找到，默认为 1"
+        },
+        "maintainers": [
+          "tylinux"
+        ],
+        "location": "portal.ts",
+        "module": () => import('@/routes/chiphell/portal.ts')
+      }
+    },
+    "name": "Chiphell",
+    "url": "www.chiphell.com",
     "lang": "zh-CN"
   },
   "chlinlearn": {
@@ -70849,7 +70990,8 @@ export default {
       "/:category": {
         "path": "/:category",
         "categories": [
-          "traditional-media"
+          "traditional-media",
+          "popular"
         ],
         "view": 0,
         "example": "/newyorker/latest",
@@ -98736,8 +98878,7 @@ export default {
       "/express": {
         "path": "/express",
         "categories": [
-          "finance",
-          "popular"
+          "finance"
         ],
         "view": 0,
         "example": "/techflowpost/express",

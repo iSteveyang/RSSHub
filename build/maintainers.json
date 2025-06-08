@@ -750,6 +750,9 @@
     "youyou-sudo",
     "honue"
   ],
+  "/banyuetan/:id?": [
+    "nczitzk"
+  ],
   "/baobua/category/:category": [
     "AiraNadih"
   ],
@@ -1484,6 +1487,9 @@
     "yuxinliu-alex"
   ],
   "/chinawriter/:id{.+}?": [],
+  "/chiphell/portal/:catId?": [
+    "tylinux"
+  ],
   "/chlinlearn/daily-blog": [
     "huyyi"
   ],
