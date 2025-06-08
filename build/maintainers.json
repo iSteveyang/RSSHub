@@ -1162,6 +1162,9 @@
   "/bupt/rczp": [
     "nczitzk"
   ],
+  "/bupt/scss/tzgg": [
+    "ziri2004"
+  ],
   "/byau/news/:type_id": [
     "ueiu"
   ],
@@ -2973,6 +2976,12 @@
   ],
   "/gmcmonline/chinacustoms": [
     "nczitzk"
+  ],
+  "/gmu/news/:type?": [
+    "FrankFahey"
+  ],
+  "/gmu/yjs/:type/:subtype": [
+    "FrankFahey"
   ],
   "/go/jihs/idwr/:year?": [
     "nczitzk"
