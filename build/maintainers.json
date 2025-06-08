@@ -3758,6 +3758,9 @@
   "/huanqiu/news/:category?": [
     "yuxinliu-alex"
   ],
+  "/huawei/developer/harmonyos/sample-code": [
+    "JiZhi-Error"
+  ],
   "/hubu/www/:category{.+}?": [
     "nczitzk"
   ],
@@ -6883,6 +6886,9 @@
   ],
   "/slowmist/:type?": [
     "AtlasQuan"
+  ],
+  "/smartlink/:site": [
+    "nickyfoto"
   ],
   "/smashingmagazine/:category?": [
     "Rjnishant530"

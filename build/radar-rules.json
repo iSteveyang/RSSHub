@@ -18566,6 +18566,19 @@
       }
     ]
   },
+  "huawei.com": {
+    "_name": "华为开发者联盟",
+    "developer": [
+      {
+        "title": "HarmonyOS 示例代码",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/consumer/cn/samples"
+        ],
+        "target": "/huawei/huawei/developer/harmonyos/sample-code"
+      }
+    ]
+  },
   "hubu.edu.cn": {
     "_name": "湖北大学",
     ".": [
@@ -33124,6 +33137,19 @@
           "/zh/news.html"
         ],
         "target": "/slowmist/:type?"
+      }
+    ]
+  },
+  "smartlink.bio": {
+    "_name": "SmartLink",
+    ".": [
+      {
+        "title": "Posts",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/"
+        ],
+        "target": "/smartlink/:site"
       }
     ]
   },

@@ -50258,6 +50258,42 @@ export default {
     "url": "huanqiu.com",
     "lang": "zh-CN"
   },
+  "huawei": {
+    "routes": {
+      "/developer/harmonyos/sample-code": {
+        "path": "/developer/harmonyos/sample-code",
+        "categories": [
+          "programming"
+        ],
+        "example": "/huawei/developer/harmonyos/sample-code",
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "developer.huawei.com/consumer/cn/samples"
+            ],
+            "target": "/huawei/developer/harmonyos/sample-code"
+          }
+        ],
+        "name": "HarmonyOS 示例代码",
+        "maintainers": [
+          "JiZhi-Error"
+        ],
+        "location": "developer/harmonyos/samplecode.ts",
+        "module": () => import('@/routes/huawei/developer/harmonyos/samplecode.ts')
+      }
+    },
+    "name": "华为开发者联盟",
+    "url": "developer.huawei.com",
+    "lang": "zh-CN"
+  },
   "hubu": {
     "routes": {
       "/www/:category{.+}?": {
@@ -90256,6 +90292,46 @@ export default {
     "name": "慢雾科技",
     "url": "slowmist.com",
     "lang": "zh-CN"
+  },
+  "smartlink": {
+    "routes": {
+      "/:site": {
+        "path": "/:site",
+        "categories": [
+          "social-media"
+        ],
+        "example": "/smartlink/bloombergpursuits",
+        "parameters": {
+          "site": "the site attached to smartlink.bio/"
+        },
+        "radar": [
+          {
+            "source": [
+              "smartlink.bio/"
+            ]
+          }
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "Posts",
+        "maintainers": [
+          "nickyfoto"
+        ],
+        "description": "smartlink.bio link in bio takes your audience from Instagram and TikTok to your website in one easy step.",
+        "location": "index.ts",
+        "module": () => import('@/routes/smartlink/index.ts')
+      }
+    },
+    "name": "SmartLink",
+    "apiRoutes": {},
+    "url": "smartlink.bio",
+    "lang": "en"
   },
   "smashingmagazine": {
     "routes": {
