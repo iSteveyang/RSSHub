@@ -1063,7 +1063,8 @@
       "/:type/:keyword{.*}?": {
         "path": "/:type/:keyword{.*}?",
         "categories": [
-          "multimedia"
+          "multimedia",
+          "popular"
         ],
         "name": "通用",
         "maintainers": [
@@ -36236,8 +36237,7 @@
       "/news/:lang?": {
         "path": "/news/:lang?",
         "categories": [
-          "finance",
-          "popular"
+          "finance"
         ],
         "view": 0,
         "example": "/followin/news",
@@ -94153,6 +94153,37 @@
   },
   "storm": {
     "routes": {
+      "/channel/:id?": {
+        "path": "/channel/:id?",
+        "categories": [
+          "new-media"
+        ],
+        "example": "/storm/channel/2",
+        "parameters": {
+          "id": "ID，可在 URL 中找到"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "storm.mg/channel/:id"
+            ]
+          }
+        ],
+        "name": "频道",
+        "maintainers": [
+          "dzx-dzx"
+        ],
+        "location": "channel.ts",
+        "module": "() => import('@/routes/storm/channel.ts')"
+      },
       "/:category?/:id?": {
         "path": "/:category?/:id?",
         "categories": [
@@ -107727,6 +107758,35 @@
     "name": "湾区日报",
     "url": "wanqu.co",
     "lang": "zh-CN"
+  },
+  "warhammer-community": {
+    "routes": {
+      "/news": {
+        "path": "/news",
+        "categories": [
+          "game"
+        ],
+        "example": "/warhammer-community/news",
+        "radar": [
+          {
+            "source": [
+              "www.warhammer-community.com/en-gb/all-news-and-features/",
+              "www.warhammer-community.com/en-gb/"
+            ]
+          }
+        ],
+        "name": "News",
+        "maintainers": [
+          "TonyRL"
+        ],
+        "url": "www.warhammer-community.com/en-gb/all-news-and-features/",
+        "location": "news.ts",
+        "module": "() => import('@/routes/warhammer-community/news.ts')"
+      }
+    },
+    "name": "Warhammer Community",
+    "url": "www.warhammer-community.com/en-gb/",
+    "lang": "en"
   },
   "warp": {
     "routes": {
