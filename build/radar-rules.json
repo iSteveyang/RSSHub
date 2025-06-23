@@ -9893,6 +9893,19 @@
       }
     ]
   },
+  "chocolatey.org": {
+    "_name": "Chocolatey",
+    "community": [
+      {
+        "title": "Package",
+        "docs": "https://docs.rsshub.app/routes/program-update",
+        "source": [
+          "/packages"
+        ],
+        "target": "/chocolateyparams=>{const id=params.id;return`/chocolatey/package${id?`/${id}`:\"\"}`}"
+      }
+    ]
+  },
   "chongbuluo.com": {
     "_name": "虫部落",
     "www": [
@@ -10577,6 +10590,20 @@
           "/knavi/journals/:name/detail"
         ],
         "target": "/cnki/journals/:name"
+      }
+    ]
+  },
+  "cockroachlabs.com": {
+    "_name": "Cockroach Labs",
+    ".": [
+      {
+        "title": "Blogs",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/blog/:category",
+          "/blog"
+        ],
+        "target": "/cockroachlabs/blog"
       }
     ]
   },
@@ -23008,6 +23035,36 @@
           "/"
         ],
         "target": "/magnumphotos/magazine"
+      }
+    ]
+  },
+  "makerworld.com": {
+    "_name": "MakerWorld",
+    ".": [
+      {
+        "title": "Contests",
+        "docs": "https://docs.rsshub.app/routes/design",
+        "source": [
+          "/:lang/contests"
+        ],
+        "target": "/makerworld/contests"
+      },
+      {
+        "title": "Trending Models",
+        "docs": "https://docs.rsshub.app/routes/design",
+        "source": [
+          "/:lang"
+        ],
+        "target": "/makerworld/trending"
+      },
+      {
+        "title": "User Uploads",
+        "docs": "https://docs.rsshub.app/routes/design",
+        "source": [
+          "/:lang/:handle/upload",
+          "/:lang/:handle"
+        ],
+        "target": "/makerworld/user/:handle/upload"
       }
     ]
   },

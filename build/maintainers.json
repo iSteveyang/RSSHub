@@ -1512,6 +1512,9 @@
   "/chnmuseum/zx/xwzt": [
     "ShabbyWhineYear"
   ],
+  "/chocolatey/packages/:id": [
+    "nczitzk"
+  ],
   "/chongbuluo/newthread": [
     "qiye45"
   ],
@@ -1671,6 +1674,9 @@
   "/cntv/:column": [
     "WhoIsSure",
     "Fatpandac"
+  ],
+  "/cockroachlabs/blog/:category?": [
+    "CookiePieWw"
   ],
   "/codeforces/contests": [
     "Fatpandac"
@@ -4840,6 +4846,15 @@
     "EthanWng97"
   ],
   "/mail/imap/:email/:folder{.+}?": [],
+  "/makerworld/contests": [
+    "TonyRL"
+  ],
+  "/makerworld/trending": [
+    "TonyRL"
+  ],
+  "/makerworld/user/:handle/upload": [
+    "TonyRL"
+  ],
   "/malaysiakini/:lang/:category?": [
     "quiniapiezoelectricity"
   ],
