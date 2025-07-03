@@ -673,6 +673,9 @@
   "/autocentre/": [
     "driversti"
   ],
+  "/azul/downloads": [
+    "nczitzk"
+  ],
   "/baai/hub/events": [
     "TonyRL"
   ],
@@ -7166,6 +7169,9 @@
   ],
   "/sspu/pe/:id?": [
     "nczitzk"
+  ],
+  "/stanford/hazyresearch/blog": [
+    "dvorak0"
   ],
   "/startuplatte/:category?": [
     "nczitzk"
