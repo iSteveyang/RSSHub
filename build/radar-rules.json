@@ -4704,6 +4704,14 @@
           "/"
         ],
         "target": "/aliyun/database_month"
+      },
+      {
+        "title": "数据库内核月报",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/monthly/"
+        ],
+        "target": "/taobao/mysql/monthly"
       }
     ]
   },
@@ -27533,6 +27541,83 @@
           "/xhsxw.htm"
         ],
         "target": "/news/whxw"
+      }
+    ]
+  },
+  "newslaundry.com": {
+    "_name": "Newslaundry",
+    ".": [
+      {
+        "title": "Explainer",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/explainer"
+        ],
+        "target": "/newslaundry/explainer"
+      },
+      {
+        "title": "Explains",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/collection/nl-cheatsheet"
+        ],
+        "target": "/newslaundry/nl-cheatsheet"
+      },
+      {
+        "title": "NL Collaboration",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/nl-collaborations"
+        ],
+        "target": "/newslaundry/nl-collaborations"
+      },
+      {
+        "title": "Podcast",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/podcast"
+        ],
+        "target": "/newslaundry/podcast"
+      },
+      {
+        "title": "Podcast",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/collection/nl-hafta-podcast"
+        ],
+        "target": "/newslaundry/podcast/nl-hafta"
+      },
+      {
+        "title": "Podcast",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/podcast/whats-your-ism"
+        ],
+        "target": "/newslaundry/podcast/whats-your-ism"
+      },
+      {
+        "title": "Reports",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/reports"
+        ],
+        "target": "/newslaundry/reports"
+      },
+      {
+        "title": "Shot",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/shot"
+        ],
+        "target": "/newslaundry/shot"
+      },
+      {
+        "title": "Subscriber Only",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/subscriber-only"
+        ],
+        "target": "/newslaundry/subscriber-only"
       }
     ]
   },
