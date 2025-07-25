@@ -6516,6 +6516,9 @@
   "/radio-canada/latest/:language?": [
     "nczitzk"
   ],
+  "/railway/blog": [
+    "jihuayu"
+  ],
   "/rarehistoricalphotos/": [
     "TonyRL"
   ],
@@ -6581,6 +6584,9 @@
     "nczitzk"
   ],
   "/right/forum/:id?": [
+    "nczitzk"
+  ],
+  "/rockthejvm/articles": [
     "nczitzk"
   ],
   "/rodong/news/:language?": [
