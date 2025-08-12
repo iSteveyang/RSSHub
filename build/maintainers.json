@@ -2068,6 +2068,9 @@
     "blade0910"
   ],
   "/dgjyw*": [],
+  "/dgut/jwb/:type?": [
+    "1200522928"
+  ],
   "/dhu/jiaowu/news/:type?": [
     "KiraKiseki"
   ],
@@ -5542,6 +5545,9 @@
   "/nintendo/system-update": [
     "hoilc"
   ],
+  "/nio/nioradio/:albumid": [
+    "marcosteam"
+  ],
   "/nippon/:category?": [
     "laampui"
   ],
@@ -6771,6 +6777,9 @@
   ],
   "/scoop/apps/:query?": [
     "nczitzk"
+  ],
+  "/scpta/news/:category": [
+    "Yeye-0426"
   ],
   "/sctv/programme/:id?/:limit?/:isFull?": [
     "nczitzk"
