@@ -2540,6 +2540,9 @@
   "/europechinese/latest": [
     "emdoe"
   ],
+  "/eventbrite/:region/:eventType?/:includePromoted?": [
+    "elibroftw"
+  ],
   "/eventernote/actors/:name/:id": [
     "KTachibanaM"
   ],
@@ -3273,6 +3276,9 @@
   ],
   "/gov/mem/gk/sgcc/:category?": [
     "nczitzk"
+  ],
+  "/gov/mem/gk/zfxxgkpt/fdzdgknr": [
+    "skeaven"
   ],
   "/gov/fmprc/:category?": [
     "nicolaszf",

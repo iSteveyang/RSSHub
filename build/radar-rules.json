@@ -14322,6 +14322,32 @@
       }
     ]
   },
+  "eventbrite.com": {
+    "_name": "Eventbrite",
+    ".": [
+      {
+        "title": "Events",
+        "docs": "https://docs.rsshub.app/routes/other",
+        "source": [
+          "/d/:region/:eventType"
+        ],
+        "target": "/eventbrite/:region/:eventType"
+      }
+    ]
+  },
+  "eventbrite.ca": {
+    "_name": "Eventbrite",
+    ".": [
+      {
+        "title": "Events",
+        "docs": "https://docs.rsshub.app/routes/other",
+        "source": [
+          "/d/:region/:eventType"
+        ],
+        "target": "/eventbrite/:region/:eventType"
+      }
+    ]
+  },
   "eventernote.com": {
     "_name": "Eventernote",
     "www": [
@@ -17583,6 +17609,14 @@
           "/gk/sgcc/:category"
         ],
         "target": "/gov/mem/gk/sgcc/:category"
+      },
+      {
+        "title": "法定主动公开内容",
+        "docs": "https://docs.rsshub.app/routes/government",
+        "source": [
+          "/gk/zfxxgkpt/fdzdgknr"
+        ],
+        "target": "/gov/mem/gk/zfxxgkpt/fdzdgknr"
       }
     ]
   },
