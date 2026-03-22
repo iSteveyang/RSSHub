@@ -10861,6 +10861,50 @@ export default {
         "location": "exchange-repair.ts",
         "module": () => import('@/routes/apple/exchange-repair.ts')
       },
+      "/newsroom": {
+        "path": "/newsroom",
+        "name": "Newsroom (中国大陆)",
+        "url": "www.apple.com.cn/newsroom",
+        "maintainers": [
+          "LinxHex"
+        ],
+        "example": "/apple/newsroom",
+        "description": "The official source for news about Apple, from Apple. Read press releases, get updates, watch video and download images.",
+        "categories": [
+          "new-media"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.apple.com.cn/newsroom",
+              "www.apple.com.cn/newsroom/:year/:month/:slug"
+            ],
+            "target": "/newsroom"
+          }
+        ],
+        "view": 0,
+        "zh": {
+          "path": "/newsroom",
+          "name": "新闻中心（中国大陆）",
+          "url": "www.apple.com.cn/newsroom",
+          "maintainers": [
+            "LinxHex"
+          ],
+          "example": "/apple/newsroom",
+          "description": "Apple 新闻中心是 Apple 新闻的来源。阅读新闻稿、获取最新消息、观看视频和下载图片。"
+        },
+        "location": "newsroom.ts",
+        "module": () => import('@/routes/apple/newsroom.ts')
+      },
       "/podcast/:id/:region?": {
         "path": "/podcast/:id/:region?",
         "categories": [
@@ -31658,8 +31702,8 @@ export default {
   },
   "cursor": {
     "routes": {
-      "/blog/:topic?": {
-        "path": "/blog/:topic?",
+      "/blog/:topic?/:locale?": {
+        "path": "/blog/:topic?/:locale?",
         "name": "Blog",
         "url": "cursor.com",
         "maintainers": [
@@ -31667,7 +31711,8 @@ export default {
         ],
         "example": "/cursor/blog",
         "parameters": {
-          "topic": "Optional topic: product | research | company | news"
+          "locale": "Locale appended to the route path, e.g. `ja`",
+          "topic": "Topic: all | product | research | company | news"
         },
         "categories": [
           "blog"
@@ -31684,18 +31729,35 @@ export default {
         "radar": [
           {
             "source": [
-              "cursor.com/blog",
+              "cursor.com/blog"
+            ],
+            "target": "/blog"
+          },
+          {
+            "source": [
               "cursor.com/blog/topic/:topic"
             ],
             "target": "/blog/:topic"
+          },
+          {
+            "source": [
+              "cursor.com/:locale/blog"
+            ],
+            "target": "/blog/all/:locale"
+          },
+          {
+            "source": [
+              "cursor.com/:locale/blog/topic/:topic"
+            ],
+            "target": "/blog/:topic/:locale"
           }
         ],
         "view": 0,
         "location": "blog.ts",
         "module": () => import('@/routes/cursor/blog.ts')
       },
-      "/changelog": {
-        "path": "/changelog",
+      "/changelog/:locale?": {
+        "path": "/changelog/:locale?",
         "name": "Changelog",
         "url": "cursor.com",
         "maintainers": [
@@ -31703,6 +31765,9 @@ export default {
           "nczitzk"
         ],
         "example": "/cursor/changelog",
+        "parameters": {
+          "locale": "Locale appended to the route path, e.g. `ja`"
+        },
         "categories": [
           "program-update"
         ],
@@ -31721,6 +31786,12 @@ export default {
               "cursor.com/changelog"
             ],
             "target": "/changelog"
+          },
+          {
+            "source": [
+              "cursor.com/:locale/changelog"
+            ],
+            "target": "/changelog/:locale"
           }
         ],
         "view": 0,
@@ -96991,6 +97062,39 @@ export default {
   },
   "perplexity": {
     "routes": {
+      "/blog": {
+        "path": "/blog",
+        "example": "/perplexity/blog",
+        "url": "www.perplexity.ai",
+        "categories": [
+          "blog"
+        ],
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": true,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.perplexity.ai/hub"
+            ],
+            "target": "/blog"
+          }
+        ],
+        "name": "Blog",
+        "maintainers": [
+          "seeyangzhi"
+        ],
+        "description": "Perplexity Blog - Explore Perplexity's blog for articles, announcements, product updates, and tips to optimize your experience. Stay informed and make the most of Perplexity.",
+        "view": 5,
+        "location": "blog.ts",
+        "module": () => import('@/routes/perplexity/blog.ts')
+      },
       "/changelog": {
         "path": "/changelog",
         "name": "Changelog",
