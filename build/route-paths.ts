@@ -757,6 +757,7 @@ export type RoutePath =
   | `/devolverdigital/blog`
   | `/devtrium/`
   | `/dewu/declaration/:categoryId?`
+  | `/dewu/techblog/:categoryId?`
   | `/dgjyw*`
   | `/dgtle/article/:id?/:pushed?`
   | `/dgtle/feed`
@@ -3092,6 +3093,7 @@ export type RoutePath =
   | `/xueqiu/user/:id/:type?`
   | `/xueqiu/user_stock/:id`
   | `/xunhupay/blog`
+  | `/xupt/jyc/:type?`
   | `/xwenming/:category?`
   | `/xys/new`
   | `/xyu/index/tzgg`

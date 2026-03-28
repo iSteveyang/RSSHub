@@ -34744,6 +34744,40 @@
   },
   "dewu": {
     "routes": {
+      "/techblog/:categoryId?": {
+        "path": "/techblog/:categoryId?",
+        "categories": [
+          "programming"
+        ],
+        "example": "/dewu/techblog",
+        "parameters": {
+          "categoryId": "分类 ID，见下表，默认为全部"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false,
+          "supportRadar": true
+        },
+        "radar": [
+          {
+            "source": [
+              "tech.dewu.com/"
+            ],
+            "target": "/techblog"
+          }
+        ],
+        "name": "技术博客",
+        "maintainers": [
+          "zhenlohuang"
+        ],
+        "description": "| 分类 | ID |\n| --- | --- |\n| 大前端 | 1 |\n| Java | 2 |\n| 音视频 | 3 |\n| 测试 | 4 |\n| Golang | 5 |\n| AI&数据 | 6 |\n| 运维&稳定生产 | 7 |\n| 技术思考 | 8 |",
+        "location": "techblog.ts",
+        "module": "() => import('@/routes/dewu/techblog.ts')"
+      },
       "/declaration/:categoryId?": {
         "path": "/declaration/:categoryId?",
         "categories": [
@@ -66263,48 +66297,6 @@
         "location": "index.ts",
         "module": "() => import('@/routes/iwara/index.ts')"
       },
-      "/subscriptions": {
-        "path": "/subscriptions",
-        "categories": [
-          "anime"
-        ],
-        "example": "/iwara/subscriptions",
-        "parameters": {},
-        "features": {
-          "requireConfig": [
-            {
-              "name": "IWARA_USERNAME",
-              "description": ""
-            },
-            {
-              "name": "IWARA_PASSWORD",
-              "description": ""
-            }
-          ],
-          "requirePuppeteer": false,
-          "antiCrawler": false,
-          "supportBT": false,
-          "supportPodcast": false,
-          "supportScihub": false,
-          "nsfw": true
-        },
-        "radar": [
-          {
-            "source": [
-              "www.iwara.tv/subscriptions/videos",
-              "www.iwara.tv/subscriptions/images"
-            ]
-          }
-        ],
-        "name": "User Subscriptions",
-        "maintainers": [
-          "FeCCC"
-        ],
-        "url": "www.iwara.tv/",
-        "description": "::: warning\n  This route requires username and password, therefore it's only available when self-hosting, refer to the [Deploy Guide](https://docs.rsshub.app/deploy/config#route-specific-configurations) for route-specific configurations.\n:::",
-        "location": "subscriptions.ts",
-        "module": "() => import('@/routes/iwara/subscriptions.ts')"
-      },
       "/ranking/:type?/:sort?/:rating?": {
         "path": "/ranking/:type?/:sort?/:rating?",
         "example": "/iwara/ranking/video/date/ecchi",
@@ -66331,6 +66323,48 @@
         ],
         "location": "ranking.ts",
         "module": "() => import('@/routes/iwara/ranking.ts')"
+      },
+      "/subscriptions": {
+        "path": "/subscriptions",
+        "categories": [
+          "anime"
+        ],
+        "example": "/iwara/subscriptions",
+        "parameters": {},
+        "features": {
+          "requireConfig": [
+            {
+              "name": "IWARA_USERNAME",
+              "description": ""
+            },
+            {
+              "name": "IWARA_PASSWORD",
+              "description": ""
+            }
+          ],
+          "requirePuppeteer": true,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false,
+          "nsfw": true
+        },
+        "radar": [
+          {
+            "source": [
+              "www.iwara.tv/subscriptions/videos",
+              "www.iwara.tv/subscriptions/images"
+            ]
+          }
+        ],
+        "name": "User Subscriptions",
+        "maintainers": [
+          "FeCCC"
+        ],
+        "url": "www.iwara.tv/",
+        "description": "::: warning\n  This route requires username and password, therefore it's only available when self-hosting, refer to the [Deploy Guide](https://docs.rsshub.app/deploy/config#route-specific-configurations) for route-specific configurations.\n:::",
+        "location": "subscriptions.ts",
+        "module": "() => import('@/routes/iwara/subscriptions.ts')"
       }
     },
     "apiRoutes": {},
@@ -75198,7 +75232,7 @@
         "categories": [
           "social-media"
         ],
-        "example": "/likeshop/bloombergpursuits",
+        "example": "/likeshop/nytimes",
         "parameters": {
           "site": "the site attached to likeshop.me/"
         },
@@ -133776,6 +133810,50 @@
     "name": "虎皮椒",
     "url": "www.xunhupay.com",
     "lang": "zh-CN"
+  },
+  "xupt": {
+    "routes": {
+      "/jyc/:type?": {
+        "path": "/jyc/:type?",
+        "categories": [
+          "university"
+        ],
+        "example": "/xupt/jyc",
+        "parameters": {
+          "type": "分类，默认为 tzgg（通知公告）"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "jyc.xupt.edu.cn/index/tzgg.htm"
+            ],
+            "target": "/jyc/tzgg"
+          }
+        ],
+        "name": "教务处通知公告",
+        "maintainers": [
+          "StudyingLover"
+        ],
+        "description": "| 分类 | 参数 |\n| ---- | ---- |\n| 通知公告 | tzgg |",
+        "location": "jyc.ts",
+        "module": "() => import('@/routes/xupt/jyc.ts')"
+      }
+    },
+    "apiRoutes": {},
+    "name": "西安邮电大学",
+    "url": "xupt.edu.cn",
+    "description": "西安邮电大学教务处通知公告",
+    "zh": {
+      "name": "西安邮电大学"
+    }
   },
   "xwenming": {
     "routes": {
