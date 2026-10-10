@@ -1,14 +1,20 @@
 import { load } from 'cheerio';
 import type { Context } from 'hono';
 
+import InvalidParameterError from '@/errors/types/invalid-parameter';
 import type { Data, Route } from '@/types';
 import { ViewType } from '@/types';
 import ofetch from '@/utils/ofetch';
 import { parseDate } from '@/utils/parse-date';
+import { isValidHost } from '@/utils/valid-host';
 
 export const handler = async (ctx: Context): Promise<Data> => {
     const { topic, locale } = ctx.req.param();
-    const limit: number = Number.parseInt(ctx.req.query('limit') ?? '10', 10);
+    if (locale && !isValidHost(locale)) {
+        throw new InvalidParameterError('Invalid locale');
+    }
+
+    const limit = Number(ctx.req.query('limit') ?? '10');
 
     const baseUrl = 'https://cursor.com';
     const normalizedTopic = topic === 'all' ? undefined : topic;
@@ -26,11 +32,11 @@ export const handler = async (ctx: Context): Promise<Data> => {
         .toArray()
         .map((el) => {
             const $el = $(el);
-            const $link = $el.find('a').first();
+            const $link = $el.find('a');
 
-            const title = $link.find('p').first().text().trim();
-            const description = $link.find('p').eq(1).text().trim();
-            const pubDate = parseDate($el.find('time').first().text().trim());
+            const title = $link.find('p').first().text();
+            const description = $link.find('p').eq(1).text();
+            const pubDate = parseDate($el.find('time').text());
 
             const href = $link.attr('href');
             const link = href ? new URL(href, baseUrl).href : undefined;
