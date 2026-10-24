@@ -1,3 +1,5 @@
+import { createHash } from 'node:crypto';
+
 import MarkdownIt from 'markdown-it';
 import pMap from 'p-map';
 
@@ -5,11 +7,10 @@ import { config } from '@/config';
 import ConfigNotFoundError from '@/errors/types/config-not-found';
 import type { Route } from '@/types';
 import cache from '@/utils/cache';
-import { parseDate } from '@/utils/parse-date';
-import { getPuppeteerPage } from '@/utils/puppeteer';
+import { getPlaywrightPage } from '@/utils/playwright';
 
 import { renderSubscriptionImages } from './templates/subscriptions';
-import { apiqRootUrl, imageRootUrl, rootUrl } from './utils';
+import { apiqRootUrl, imageRootUrl, parseCreatedAt, rootUrl } from './utils';
 
 const md = MarkdownIt({
     html: true,
@@ -57,7 +58,7 @@ export const route: Route = {
     handler,
     url: 'www.iwara.tv/',
     description: `::: warning
-  This route requires username and password, therefore it's only available when self-hosting, refer to the [Deploy Guide](https://docs.rsshub.app/deploy/config#route-specific-configurations) for route-specific configurations.
+This route requires username and password, therefore it's only available when self-hosting, refer to the [Deploy Guide](https://docs.rsshub.app/deploy/config#route-specific-configurations) for route-specific configurations.
 :::`,
 };
 
@@ -68,8 +69,14 @@ async function handler() {
 
     const username = config.iwara.username;
     const password = config.iwara.password;
+    const accountKey = createHash('sha256')
+        .update(JSON.stringify([username, password]))
+        .digest('hex');
 
-    const { page, destory } = await getPuppeteerPage(rootUrl, {
+    const { page, destroy } = await getPlaywrightPage(rootUrl, {
+        onBeforeLoad: async (page) => {
+            await page.route('**/*', (route) => (['document', 'fetch', 'xhr'].includes(route.request().resourceType()) ? route.continue() : route.abort()));
+        },
         gotoConfig: {
             waitUntil: 'domcontentloaded',
         },
@@ -94,7 +101,7 @@ async function handler() {
 
         // login and get refresh token
         const refreshHeaders = await cache.tryGet(
-            'iwara:token',
+            `iwara:${accountKey}:refresh-token`,
             async () => {
                 const result = await fetchApi(`${apiqRootUrl}/user/login`, {
                     method: 'POST',
@@ -109,11 +116,14 @@ async function handler() {
 
         // get access token
         const authHeaders = await cache.tryGet(
-            'iwara:authToken',
+            `iwara:${accountKey}:access-token`,
             async () => {
                 const result = await fetchApi(`${apiqRootUrl}/user/token`, {
                     method: 'POST',
-                    headers: { ...apiHeaders, Authorization: refreshHeaders.authorization },
+                    headers: {
+                        ...apiHeaders,
+                        Authorization: refreshHeaders.authorization,
+                    },
                 });
                 return { authorization: 'Bearer ' + result.accessToken };
             },
@@ -121,7 +131,10 @@ async function handler() {
             false
         );
 
-        const authedHeaders = { ...apiHeaders, Authorization: authHeaders.authorization };
+        const authedHeaders = {
+            ...apiHeaders,
+            Authorization: authHeaders.authorization,
+        };
 
         // fetch subscriptions
         const [videoResponse, imageResponse] = await Promise.all([
@@ -138,7 +151,7 @@ async function handler() {
                 link: `${rootUrl}/video/${item.id}`,
                 category: ['Video', ...(item.tags ? item.tags.map((i) => i.id) : [])],
                 imageUrl,
-                pubDate: parseDate(item.createdAt),
+                pubDate: parseCreatedAt(item.createdAt),
                 private: item.private,
             };
         });
@@ -151,7 +164,7 @@ async function handler() {
                 link: `${rootUrl}/image/${item.id}`,
                 category: ['Image', ...(item.tags ? item.tags.map((i) => i.id) : [])],
                 imageUrl,
-                pubDate: parseDate(item.createdAt),
+                pubDate: parseCreatedAt(item.createdAt),
             };
         });
 
@@ -160,39 +173,36 @@ async function handler() {
         // Execute fetches with limited concurrency
         const items = await pMap(
             list,
-            (item) =>
-                cache.tryGet(item.link, async () => {
+            async (item) => {
+                const description = await cache.tryGet(`iwara:${accountKey}:subscription-body:${item.link}:${item.private === true ? 'private' : 'public'}`, async () => {
                     let description = renderSubscriptionImages([item.imageUrl]);
 
                     if (item.private === true) {
                         description += 'private';
-                        return {
-                            title: item.title,
-                            author: item.author,
-                            link: item.link,
-                            category: item.category,
-                            pubDate: item.pubDate,
-                            description,
-                        };
+                        return description;
                     }
 
                     const apiUrl = item.link.replace('www.iwara.tv', 'apiq.iwara.tv');
-                    const response = await fetchApi(apiUrl, { headers: authedHeaders });
+                    const response = await fetchApi(apiUrl, {
+                        headers: authedHeaders,
+                    });
 
                     description = renderSubscriptionImages(response.files ? response.files.filter((f) => f.type === 'image').map((f) => `${imageRootUrl}/image/original/${f.id}/${f.name}`) : [item.imageUrl]);
 
                     const body = response.body ? md.render(response.body) : '';
                     description += body;
 
-                    return {
-                        title: item.title,
-                        author: item.author,
-                        link: item.link,
-                        category: item.category,
-                        pubDate: item.pubDate,
-                        description,
-                    };
-                }),
+                    return description;
+                });
+                return {
+                    title: item.title,
+                    author: item.author,
+                    link: item.link,
+                    category: item.category,
+                    pubDate: item.pubDate,
+                    description,
+                };
+            },
             { concurrency: 5 }
         );
 
@@ -202,6 +212,6 @@ async function handler() {
             item: items,
         };
     } finally {
-        await destory();
+        await destroy();
     }
 }
